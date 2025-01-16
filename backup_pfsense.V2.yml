@@ -10,7 +10,7 @@
 
     - name: PFSENSE | Get Cookies & CSRF Token 1
       ansible.builtin.uri:
-        url: "{{ pfsense_baseurl }}/diag_backup.php"
+        url: "{{ pfsense_protocol }}://{{ pfsense_host }}:4433/diag_backup.php"
         validate_certs: "{{ pfsense_verify_certificate }}"
         method: GET
         return_content: yes
