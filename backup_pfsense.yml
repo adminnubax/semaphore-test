@@ -1,5 +1,6 @@
 - name: Backup del firewall pfSense
   hosts: all
+  gather_facts: no
   tasks:
     - name: Autenticarse en pfSense
       uri:
