@@ -6,7 +6,7 @@
   tasks:
     - name: PFSENSE | Build base URL
       ansible.builtin.set_fact:
-        pfsense_baseurl: "{{ pfsense_protocol }}://{{ pfsense_host }}"
+        pfsense_baseurl: "{{ pfsense_protocol }}://{{ pfsense_host }}:4433"
 
     - name: PFSENSE | Get Cookies & CSRF Token 1
       ansible.builtin.uri:
