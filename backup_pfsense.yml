@@ -4,7 +4,7 @@
   tasks:
     - name: Autenticarse en pfSense
       uri:
-        url: "https://{{ ansible_host }}/index.php"
+        url: "https://{{ ansible_host }}:4433/index.php"
         method: POST
         body: "usernamefld={{ pfsense_username }}&passwordfld={{ pfsense_password }}&login=Login"
         headers:
