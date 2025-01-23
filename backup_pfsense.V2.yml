@@ -1,6 +1,6 @@
 - name: Realizar backup del pfSense con pfbackup
   hosts: localhost
-  gather_facts: yes
+  gather_facts: no
   tasks:
     - name: Ejecutar comando pfbackup
       shell: >
