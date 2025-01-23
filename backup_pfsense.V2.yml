@@ -10,6 +10,8 @@
         -p '{{ pfsense_password }}'
         -f /home/user1/ansible/backup/{{ backup_file }}
         --no-verify
+      become: yes
+      become_user: user1
       register: pfbackup_output
 
     - name: Mostrar resultado del backup
