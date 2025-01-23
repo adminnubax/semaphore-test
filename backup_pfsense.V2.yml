@@ -4,7 +4,7 @@
   tasks:
     - name: Ejecutar comando pfbackup
       shell: >
-        /snap/bin/pfbackup -U https://{{ pfsense_ip }}:4433
+        sudo /snap/bin/pfbackup -U https://{{ pfsense_ip }}:4433
         -u {{ pfsense_username }}
         -p '{{ pfsense_password }}'
         -f /home/user1/ansible/backup/{{ backup_file }}
