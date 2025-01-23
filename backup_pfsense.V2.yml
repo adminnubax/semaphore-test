@@ -11,7 +11,7 @@
         -f /home/user1/ansible/backup/{{ backup_file }}
         --no-verify
       become: yes
-      become_user: user1
+      become_user: root
       register: pfbackup_output
 
     - name: Mostrar resultado del backup
